@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ocena s fotografije – Luka Kos, strojne inštalacije</title>
+<meta name="description" content="Pošljite fotografijo kopalnice, ogrevanja ali okvare in takoj dobite okvirno oceno. Luka Kos, strojne inštalacije, vsa Slovenija.">
+<link rel="icon" href="img/logo-znak.png">
+<link rel="stylesheet" href="stil.css?v=5">
+</head>
+<body>
+<a class="sr-only sr-only--focusable" href="#main">Na vsebino</a>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Luka Kos – domov">
+    <img class="brand__logo" src="img/logo-celoten.png" alt="Inštalacije Kos, Luka Kos s.p." width="164" height="48">
+  </a>
+  <span class="faze t-accent" aria-hidden="true"><span class="faza is-on">● Ogled</span><span class="faza">✎ Ponudba</span><span class="faza">▶ Izvedba</span></span>
+  <nav class="nav" aria-label="Glavna navigacija">
+    <a class="tbtn" href="index.html"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span class="tbtn__label">Domov</span></a>
+    <a class="tbtn" href="storitve.html"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span class="tbtn__label">Storitve</span></a>
+    <a class="tbtn" href="reference.html"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span class="tbtn__label">Reference</span></a>
+    <a class="tbtn" href="kontakt.html"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span class="tbtn__label">Kontakt</span></a>
+    <a class="tbtn is-current" href="ocena.html" aria-current="page"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span class="tbtn__label">Ocena</span></a>
+  </nav>
+  <a class="btn btn--light header-call" href="tel:+38640720568"><span>040 720 568</span><span class="btn__icon" aria-hidden="true">→</span></a>
+</header>
+
+<main id="main">
+
+  <section class="mojster mojster--vrh">
+    <div class="container mojster__glava t-accent"><span>_Ocena s fotografije</span><span>_Brez obveznosti</span><span>_Vsa Slovenija</span></div>
+    <div class="container mojster__telo">
+      <h1 class="mojster__naslov">Ocena</h1>
+      <div class="mojster__desno">
+        <p class="t-accent mojster__pod">Pošljite fotografijo. Dobite oceno.</p>
+        <p class="t-body-s">Izberite delo, dodajte do tri fotografije in na kratko opišite, kaj želite. Okvirno ceno vidite takoj, nato vas pokličem za ogled ali točno ponudbo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ocena container" id="ocena">
+    <form class="ocena__obrazec" id="ocena-obrazec" novalidate>
+      <fieldset class="ocena__korak">
+        <legend class="t-accent ocena__oznaka"><span>01</span>_Kaj potrebujete</legend>
+        <input type="hidden" name="storitev" id="storitev">
+        <div class="ocena__izbire">
+            <button type="button" class="izbira" data-kljuc="kopalnica" data-foto="kopalnico iz vhoda in iz kota ter tuš ali kad od blizu" data-primer="npr. kad zamenjamo s tušem, nov WC in keramika, kopalnica 5 m²" aria-pressed="false"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span>Adaptacija kopalnice</span></button>
+            <button type="button" class="izbira" data-kljuc="toplotna-crpalka" data-foto="kotel in kotlovnico, rezervoar za olje (če je) in prostor zunaj, kamor bi šla zunanja enota" data-primer="npr. kotel na olje bi zamenjal s toplotno črpalko, hiša 160 m², radiatorji" aria-pressed="false"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span>Toplotne črpalke</span></button>
+            <button type="button" class="izbira" data-kljuc="ogrevanje" data-foto="radiatorje in razdelilnik ali prostor, kjer želite talno ogrevanje" data-primer="npr. zamenjava 8 starih radiatorjev v hiši" aria-pressed="false"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span>Radiatorji in talno ogrevanje</span></button>
+            <button type="button" class="izbira" data-kljuc="vodovod" data-foto="obstoječe cevi, števec ali prostor, kjer je potrebna nova inštalacija" data-primer="npr. nove vodovodne cevi v stanovanju, stare so pocinkane" aria-pressed="false"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span>Vodovod in kanalizacija</span></button>
+            <button type="button" class="izbira" data-kljuc="servis" data-foto="napravo in njeno tablico (nalepko s tipom), pri okvari tudi napako na zaslonu" data-primer="npr. letni servis toplotne črpalke ali klima ne hladi" aria-pressed="false"><span class="bracket" aria-hidden="true"><span class="bracket__dot"></span></span><span>Servis in okvare</span></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="ocena__korak">
+        <legend class="t-accent ocena__oznaka"><span>02</span>_Fotografije (1–3)</legend>
+        <p class="t-body-xs muted" id="foto-namig">Fotografirajte prostor ali napravo, ki jo želite zamenjati.</p>
+        <label class="ocena__foto" for="slike">
+          <input class="sr-only" type="file" id="slike" accept="image/*" multiple>
+          <span class="ocena__foto-ikona" aria-hidden="true">+</span>
+          <span><span class="t-body-s" id="foto-stanje">Izberi ali posnemi fotografije</span><br><span class="t-accent muted" id="foto-imena">Do 3 fotografije</span></span>
+        </label>
+        <div class="ocena__predogled" id="foto-predogled"></div>
+      </fieldset>
+
+      <fieldset class="ocena__korak">
+        <legend class="t-accent ocena__oznaka"><span>03</span>_Kaj želite</legend>
+        <textarea class="vnos" name="zelja" id="zelja" rows="3" maxlength="1000" required placeholder="Opišite, kaj želite"></textarea>
+        <div class="ocena__polja">
+          <label class="polje"><span class="t-accent">Površina v m² (neobvezno)</span><input class="vnos" name="kvadratura" id="kvadratura" inputmode="decimal" placeholder="npr. 30"></label>
+          <label class="polje"><span class="t-accent">Kraj</span><input class="vnos" name="kraj" id="kraj" required placeholder="npr. Kranj"></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="ocena__korak">
+        <legend class="t-accent ocena__oznaka"><span>04</span>_Kam vas pokličem</legend>
+        <div class="ocena__polja">
+          <label class="polje"><span class="t-accent">Ime</span><input class="vnos" name="ime" id="ime" required autocomplete="name"></label>
+          <label class="polje"><span class="t-accent">Telefon</span><input class="vnos" name="telefon" id="telefon" type="tel" required autocomplete="tel" placeholder="041 123 456"></label>
+          <label class="polje polje--siroko"><span class="t-accent">E-pošta (neobvezno, za ponudbo)</span><input class="vnos" name="email" id="email" type="email" autocomplete="email"></label>
+        </div>
+        <label class="ocena__soglasje t-body-xs"><input type="checkbox" name="soglasje_obdelava" id="soglasje" required> <span>Strinjam se z obdelavo podatkov in fotografij za pripravo ocene in ponudbe (<a href="https://www.thebilko.com/lukakos/zasebnost">zasebnost</a>). Fotografije za oceno samodejno pregleda AI.</span></label>
+        <label class="ocena__soglasje t-body-xs"><input type="checkbox" name="soglasje_sms" checked> <span>Strinjam se, da me kontaktirate po SMS (termin klica, obvestila o projektu). Odjava kadar koli z odgovorom STOP.</span></label>
+      </fieldset>
+
+      <p class="ocena__napaka t-body-s" id="ocena-napaka" role="alert"></p>
+      <button class="btn btn--light btn--big" type="submit" id="ocena-poslji"><span>Pošlji in prikaži oceno</span><span class="btn__icon" aria-hidden="true">→</span></button>
+    </form>
+
+    <div class="ocena__rezultat" id="ocena-rezultat" hidden tabindex="-1"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="noga__oblak t-accent" aria-hidden="true"><span>Adaptacije kopalnic</span><span>Vodovod</span><span>Kanalizacija</span><span>Radiatorji</span><span>Talno ogrevanje</span><span>Toplotne črpalke</span><span>Klime</span><span>Menjava bojlerjev</span><span>Odmaševanje odtokov</span><span>Puščanje in okvare</span><span>Podometni WC</span><span>Tuš v nivoju tal</span><span class="noga__kriz">+</span></div>
+  <div class="container site-footer__top">
+    <div>
+      <img class="footer-logo" src="img/logo-celoten.png" alt="Inštalacije Kos, Luka Kos s.p." width="205" height="60" loading="lazy">
+      <p class="t-accent">Luka Kos</p>
+      <p class="t-body-s">Strojne inštalacije<br>Adaptacije kopalnic in popravila</p>
+    </div>
+    <nav class="footer-nav t-accent" aria-label="Noga">
+      <a href="index.html">Domov</a><a href="storitve.html">Storitve</a><a href="reference.html">Reference</a><a href="kontakt.html">Kontakt</a><a href="ocena.html">Ocena</a>
+    </nav>
+    <a class="btn" href="tel:+38640720568"><span>040 720 568</span><span class="btn__icon" aria-hidden="true">→</span></a>
+  </div>
+  <div class="container site-footer__bottom">
+    <span class="site-footer__big">Luka Kos</span>
+    <span class="t-accent">© 2026 · Območje dela: vsa Slovenija</span>
+  </div>
+</footer>
+<script src="ocena.js?v=3"></script>
+<script src="skupno.js?v=5"></script>
+</body>
+</html>
